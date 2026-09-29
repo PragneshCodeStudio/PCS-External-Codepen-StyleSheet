@@ -12,6 +12,11 @@
   --white: #ffffff;
   --white04: rgba(255, 255, 255, 0.04);
   --black: #000000;
+  
+  --primary-bg: #111111;
+  --secondary-bg: #222222;
+
+  --border-color : #353535;
 
   --hover: darkorange;
 
@@ -74,6 +79,15 @@ h4 {
     font-weight: 500;
     color: #fff;
     letter-spacing: 1px;
+}
+.action-info {
+	text-align: center;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: center;
+	column-gap: 16px;
+	row-gap: 8px;
 }
 .icon-red{
   color: red;
@@ -139,6 +153,9 @@ section {
   padding-top: 132px;
   padding-bottom: 132px;
 }
+header ~ section:nth-child(2n) {
+    background-color: #222222;
+}
 .center {
   text-align: center;
   width: 100%;
@@ -178,6 +195,12 @@ header + .spacer {
   fill: #222;
 }
 
+.info-head {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+}
+
 /* START HEADER DESIGN CODE */
 header {
   width: 100%;
@@ -188,6 +211,7 @@ header {
   padding-top: 16px;
   padding-bottom: 16px;
   z-index: 999;
+  border-bottom: 1px solid #353535;
 }
 header .inner-wrap {
   display: flex;
@@ -285,3 +309,48 @@ p.para-note {
     font-weight: 500;
 }
 /* END DEFAULT CODE */
+
+
+
+
+
+
+/* START RESPONSIVE CODE */
+  @media screen and (max-width: 1280px){
+    header + .spacer {
+      padding-top: 112px;
+    }
+    .site-logo a {
+      height: 56px;
+    }
+    h1 {
+      font-size: 32px;
+    }
+    h2 {
+      font-size: 28px;
+    }
+    h5 {
+      font-size: 16px;
+    }
+  }
+  
+  @media screen and (max-width: 767px){
+    .container {
+      max-width: 100%;
+      padding-inline: 20px;
+    }
+    
+    .site-logo a {
+      height: 44px;
+    }
+    
+    .spacer{
+      padding-inline: 20px;
+    }
+    
+    header + .spacer {
+      padding-top: 96px;
+      padding-inline: 20px;
+    }
+}
+/* END RESPONSIVE CODE */
