@@ -5,14 +5,14 @@
     width: 8px;
 }
 *::-webkit-scrollbar-track {
-    background: #EEE
+    background: #EEE;
 }
 *::-webkit-scrollbar-thumb {
-    background: #0c0c0e;
+    background: #6c6c6c;
 }
 * {
     scrollbar-width: thin;
-    scrollbar-color: #0c0c0e #EEE
+    scrollbar-color: #6c6c6c #EEE;
 }
 /* END CUSTOM SCROLL BAR */
 
