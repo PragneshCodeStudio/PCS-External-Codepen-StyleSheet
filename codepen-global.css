@@ -8,11 +8,11 @@
     background: #EEE
 }
 *::-webkit-scrollbar-thumb {
-    background: #222222;
+    background: #0c0c0e;
 }
 * {
     scrollbar-width: thin;
-    scrollbar-color: #222222 #EEE
+    scrollbar-color: #0c0c0e #EEE
 }
 /* END CUSTOM SCROLL BAR */
 
