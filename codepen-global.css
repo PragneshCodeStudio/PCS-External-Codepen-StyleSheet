@@ -1,25 +1,7 @@
 /* ATTENTION PLEASE, DO NOT REMOVE DEFAULT CODE  */
-
-/* START DEFAULT CODE */
 @import url("https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap");
-
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-/* START CUSTOM SCROLL BAR */
-*::-webkit-scrollbar {
-    width: 8px;
-}
-*::-webkit-scrollbar-track {
-    background: #EEE;
-}
-*::-webkit-scrollbar-thumb {
-    background: #6c6c6c;
-}
-* {
-    scrollbar-width: thin;
-    scrollbar-color: #6c6c6c #EEE;
-}
-/* END CUSTOM SCROLL BAR */
 :root {
   	--head-font: "Teko";
   	--body-font: "Poppins";
@@ -44,6 +26,22 @@
   	--purple: #b520ff;
 	--gap: 2.1vw;
 }
+
+/* START CUSTOM SCROLL BAR */
+*::-webkit-scrollbar {
+    width: 8px;
+}
+*::-webkit-scrollbar-track {
+    background: #EEE;
+}
+*::-webkit-scrollbar-thumb {
+    background: #6c6c6c;
+}
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #6c6c6c #EEE;
+}
+/* END CUSTOM SCROLL BAR */
 
 * {
   box-sizing: border-box;
@@ -329,6 +327,71 @@ p.para-note {
 }
 /* END DEFAULT CODE */
 
+/* START AUDIO-BTN TOGGLE SWITCH DESIGN CODE */
+.audio-toggle {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 9999;
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+    background: var(--white);
+    backdrop-filter: blur(6px);
+    color: var(--primary-bg);
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s, opacity 0.2s;
+    padding: 10px;
+}
+.audio-toggle:hover { 
+  background: rgba(255, 255, 255, 0.9); 
+}
+.audio-toggle:focus-visible { 
+  outline: 2px solid #23ff7d; 
+  outline-offset: 3px; 
+}
+.audio-toggle .icon-unmuted { 
+  display: none; 
+}
+.audio-toggle.is-unmuted .icon-muted { 
+  display: none; 
+}
+.audio-toggle.is-unmuted .icon-unmuted { 
+  display: block; 
+}
+.audio-toggle.is-ended { 
+  opacity: 0; 
+  pointer-events: none; 
+}
+/* END AUDIO BTN ON/OFF SWITCH DESIGN CODE */
+
+/* START RELOAD BTN TOGGLE SWITCH DESIGN CODE */
+.reload-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 9999;
+}
+.reload-btn button {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: var(--white);
+    backdrop-filter: blur(6px);
+    color: var(--primary-bg);
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s, opacity 0.2s;
+    padding: 10px;
+}
+.reload-btn button:hover { 
+  background: rgba(255, 255, 255, 0.9);
+}
+/* END RELOAD BTN TOGGLE SWITCH DESIGN CODE */
+
 
 
 
@@ -340,7 +403,7 @@ p.para-note {
       padding-top: 112px;
     }
     .site-logo a {
-      height: 56px;
+      height: 48px;
     }
     h1 {
       font-size: 32px;
@@ -351,6 +414,11 @@ p.para-note {
     h5 {
       font-size: 16px;
     }
+	.reload-btn button,
+  	.audio-toggle {
+	    width: 40px;
+	    height: 40px;
+  	}
   }
   
   @media screen and (max-width: 767px){
@@ -360,7 +428,7 @@ p.para-note {
     }
     
     .site-logo a {
-      height: 44px;
+      height: 32px;
     }
     
     .spacer{
@@ -371,5 +439,11 @@ p.para-note {
       padding-top: 96px;
       padding-inline: 20px;
     }
+
+  	.audio-toggle {
+		width: 36px;
+		height: 36px;
+		padding: 8px;
+	}
 }
 /* END RESPONSIVE CODE */
